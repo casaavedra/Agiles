@@ -6,14 +6,14 @@ def recur_fibo(n):
    else:
        return(recur_fibo(n-1) + recur_fibo(n-2))
 
+nterms = int(input("Hasta que numero desea la serie? "))
 
-# take input from the user
-nterms = int(input("How many terms? "))
-
-# check if the number of terms is valid
 if nterms <= 0:
-   print("Plese enter a positive integer")
+   print("El numero ingresado debe ser positivo y mayor a cero.")
 else:
-   print("Fibonacci sequence:")
+   print("Serie de Fibonacci:")
    for i in range(nterms):
-       print(recur_fibo(i))
+       if recur_fibo(i) <= nterms:
+           print(recur_fibo(i))
+       else:
+           break
